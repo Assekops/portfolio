@@ -26,6 +26,12 @@ a,
 }
 
 /* DESKTOP NAV  */
+
+.logo-mini{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
 nav,
 .nav-links {
     display: flex;
@@ -206,7 +212,7 @@ section {
  }
 
  /* BUTTONS */
- .btn-container {
+ /* .btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -215,11 +221,12 @@ section {
     font-weight: 600;
     transition: all 300ms ease;
     padding: 1rem;
-    width: 10rem;
+    width: 12rem;
     border-radius: 2rem;
  }
  .btn-color-1, .btn-color-2 {
     border: rgb(53, 53, 53) 0.1rem solid;
+    text-transform: uppercase;
  }
 
  .btn-color-1:hover, .btn-color-2:hover {
@@ -244,7 +251,69 @@ section {
 
  .btn-container {
     gap: 1rem;
- }
+ } */
+
+ /*Button animate---Start*/
+ #my_wrap {margin: 20px auto;text-align: center;}
+.btn-slide, .btn-slide2 {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    padding: 0;
+    border-radius: 50px;
+    background: #fdfdfd;
+    border: 2px solid #0099cc;
+    margin: 10px;
+    transition: .5s;
+  
+} 
+.btn-slide svg, .btn-slide2 svg {fill:white; width: 22px;height: auto;}
+.btn-slide2 {border: 2px solid #0099cc;fill:black;}
+.btn-slide:hover {  background-color: #0099cc;}
+.btn-slide2:hover {  background-color: #0099cc;}
+.btn-slide:hover span.circle, .btn-slide2:hover span.circle2 {
+    left: 100%;
+    margin-left: -45px;
+    background-color: rgb(0 0 0 / 20%);
+    color: #0099cc;
+}
+.btn-slide2:hover span.circle2 {   color: #0099cc;}
+.btn-slide:hover span.title, .btn-slide2:hover span.title2 {  left: 40px;   opacity: 0;}
+.btn-slide:hover span.title-hover, .btn-slide2:hover span.title-hover2 {opacity: 1; left: 40px;}
+.btn-slide span.circle, .btn-slide2 span.circle2 {
+    display: block;
+    background-color: #0099cc;
+    color: #fff;
+    position: relative;
+    float: left;
+    margin: 4px;
+    line-height: 48px;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    border-radius: 50%;
+}
+.btn-slide2 span.circle2 {   background-color: #0099cc;}
+.btn-slide span.title,
+  .btn-slide span.title-hover, .btn-slide2 span.title2,
+  .btn-slide2 span.title-hover2 {
+    position: absolute;
+    left: 90px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    color: #30abd5;
+    transition: .5s;
+}
+.btn-slide2 span.title2, .btn-slide2 span.title-hover2 { color: #0099cc;  left: 80px;}
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {  left: 80px;   opacity: 0;}
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {  color: #fff;}  
+ /*Button Animate---End*/
 
  /* ABOUT */
  #about {
@@ -294,3 +363,100 @@ section {
     width: 400px;
     margin: auto 0;
 }
+
+
+
+
+
+
+/* =====================
+  Navbar Styles
+===================== */
+/*.navbar-default {
+    background-color: transparent;
+    border: none;
+    height: 80px;
+    left: 0;
+    margin-bottom: 0;
+    padding: 0 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+  }
+  .navbar-header {
+    height: 80px;
+  }
+  .navbar-nav {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .navbar-brand,
+  .navbar-nav > li > a {
+    font-family: 'Unica One', cursive;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 10px;
+    opacity: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .navbar-brand .logo {
+    margin-right: 15px;
+    margin-top: -12px;
+    max-height: 90px;
+  }
+  .navbar-brand span {
+    color: #29a598;
+  }
+  .navbar-nav > li > a,
+  .navbar-nav > li > button {
+    color: #6b7a78;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 22px;
+  }
+  .navbar-default .navbar-nav > .active > a {
+    background-color: transparent;
+    color: #29a598;
+    text-decoration: underline;
+  }
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus,
+  .navbar-default .navbar-nav > .active > a:hover {
+    background-color: transparent;
+    color: #208479;
+    text-decoration: underline;
+  }
+  
+  .menu-fixed {
+    background-color: #fffefd;
+    background-color: rgba(255,254,253,0.97);
+    border-radius: 0;
+    box-shadow: 0 3px 9px rgba(8,33,30,0.15);
+    height: 60px;
+    padding-top: 0;
+    position: fixed;
+    transition: background-color 0.5s ease-in-out,
+                box-shadow 0.5s ease-in-out;
+  }
+  .menu-fixed .navbar-header {
+    height: 60px;
+  }
+  .menu-fixed .navbar-toggle,
+  .menu-fixed .navbar-nav > li > a {
+    margin-top: 13px;
+  }
+  .menu-fixed .navbar-brand {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+  }
+  */

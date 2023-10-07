@@ -10,54 +10,70 @@
 </head>
 
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Assefa Altaye</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Assefa Altaye</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header id="header">
+        <nav id="desktop-nav" >
+            <div class="logo">
+                <!-- <img src="./assets/Profile.png" alt="Logo" class="logo-mini"> -->
+                Assefa Altaye</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Assefa Altaye</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <section id="profile">
         <div class="section__pic-container">
+            <!-- <img src="./assets/hero.png" class="hero"> -->
             <img src="./assets/Profile.png" alt="Assefa Altaye Profile Picture">
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Assefa Altaye</h1>
-            <p class="section__text__p2">Full Stack Developer</p>
-            <div class="btn-container">
+            <p class="section__text__p2">Software Engineer</p>
+            <div id="my_wrap">
+                <a href="#" class="btn-slide">
+                  <span class="circle"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></span>
+                  <span class="title">Contact</span>
+                  <span class="title-hover">Send E-Mail</span>
+                </a>
+                <a href="#" class="btn-slide2" onClick="openTab(this)" name="./assets/ASSEFA ALTAYE_RESUME.pdf">
+                  <span class="circle2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                  <span class="title2">Resume</span>
+                  <span class="title-hover2" >Download</span>
+                </a>
+                </div>
+            <!-- <div class="btn-container">
                 <button class="btn btn-color-2" 
-                onclick="window.open('./assets/ASSEFA ALTAYE_RESUME.pdf')">Download
-                    Resume
+                onclick="window.open('./assets/ASSEFA ALTAYE_RESUME.pdf')">Resume 
                 </button>
                 <button class="btn btn-color-1" 
                 onclick="location.href='./#contact'">Contact Me
                 </button>
-            </div>
+            </div> -->
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="Assefa Altaye linkedin Profile" class="icon" 
+                <img src="./assets/linkedin_icon.png" alt="Assefa Altaye linkedin Profile" class="icon" 
                 onclick="location.href='https://www.linkedin.com/in/assefaaltaye/'">
                 <img src="./assets/github.png" alt="Assefa Altaye github Profile" class="icon" 
                 onclick="location.href='https://github.com/Assekops'">
@@ -74,20 +90,19 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>Senior E-Bankign Technology Support Officer <br /> (2+ years)</p>
-                        <p><br />Software Engineer & Programmer Analyst <br /> (8+ years)</p>
-                    </div>
-                    <div class="details-container">
                         <img src="./assets/education.png" alt="Education icon" class="icon">
                         <h3>Education</h3>
-                        <p>MSc. In Software Engineering 
-                            <br /> BSc. In Computer Science
-                            <br /> Full Stack Web & Mobile Development </p>
+                        <p>MSc. Software Engineering <br /> HilCoE School of Computer Science, Mar 2021</p>
+                        <p><br />BSc. Computer Science <br /> Addis Ababa University, Aug 2009</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                        <h3>Certificates</h3>
+                        <p>Full Stack Web & Mobile Development <br /> Sep 2023</p>
+                        <p><br />Introduction to AWS Organizations<br /> Oct 2022</p>
                     </div>
                 </div>
-                <div class="text-container"><p>Software Engineer with a demonstrated history of working in the information technology and services industry. Strong engineering professional skilled in JavaScript, Bootstrap, CSS3, HTML5, JAVA, SQL, PHP, MySQL, Software Testing, Basic Linux Administration, AWS Technical Essentials.</p></div>
+                <div class="text-container"><p>I am a software Engineer with a focus on web and mobile application development. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer. <span>Fun fact: I run a lot of miles to stay skinny and healthy.</span></p></div>
             </div>
         </div>
         <div>
@@ -95,6 +110,38 @@
             onclick="location.href='./#experience'">
         </div>
     </section>
+    <section class="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    <h2 class="experience-sub-title">Programmer Analyst</h2>
+                    <div class="ariticle-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var header= document.getElementById("header")
+        var navbar= document.getElementById("desktop-nav")
+
+        window.onscroll= function(){
+            if(window.pageYOffset >= navbar.offsetTop){
+                header.classList.add("sticky");
+            }else{
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
